@@ -1,11 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
-class PersonalInfo extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        const { info, onChange } = this.props;
+function PersonalInfo(props) {
+        const { info, onChange } = props;
         return (
             <div className='personalInfo'>
                 <input name='firstName' value={info.firstName} onChange={onChange} placeholder="First name" required></input>
@@ -14,8 +10,6 @@ class PersonalInfo extends React.Component {
                 <input name='email' type='email' value={info.email} onChange={onChange} placeholder="Email" required></input>
             </div>
         )
-        
-    }
 }
 
 export default PersonalInfo;

@@ -1,11 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-class Education extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        const { info, onChange, index, add, del } = this.props;
+function Education(props) {
+        const { info, onChange, index, add, del } = props;
         return (
             <div className="Education" name={index}>
                 <input name='university' required value={info.university} onChange={onChange} placeholder="University Name"></input>
@@ -16,9 +12,7 @@ class Education extends React.Component {
                 <button onClick={add} type='button'> Add Entry</button>
                 <button onClick={del} type='button'> Delete Entry</button>
             </div>
-        )
-        
-    }
+        ) 
 }
 
 export default Education;

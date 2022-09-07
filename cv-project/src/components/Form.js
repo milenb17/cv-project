@@ -1,15 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import PersonalInfo from "./PersonalInfo";
 import Experience from './Experience';
 import Education from './Education';
 
-class Form extends React.Component {
-    constructor(props) {
-        super(props)
-        
-    }
-    render() {
-        const { info, onChange, onSubmit, edit, add, del } = this.props;
+function Form(props) {
+        const { info, onChange, onSubmit, edit, add, del } = props;
         return (
             <form onSubmit={onSubmit}>
                 <p>Personal Information</p>
@@ -32,8 +27,6 @@ class Form extends React.Component {
                 <button type='submit'>Submit</button>
             </form>
         )
-        
-    }
 }
 
 export default Form;

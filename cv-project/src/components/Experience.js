@@ -1,11 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
-class Experience extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        const { info, onChange, index, add, del } = this.props;
+function Experience(props) {
+        const { info, onChange, index, add, del } = props;
         return (
             <div className="Experience" name={index}>
                 <input name='position' required value={info.position} onChange={onChange} placeholder="Position"></input>
@@ -17,8 +13,6 @@ class Experience extends React.Component {
                 <button onClick={del} type='button'> Delete Entry</button>
             </div>
         )
-        
-    }
 }
 
 export default Experience;
